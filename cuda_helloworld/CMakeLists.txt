@@ -1,0 +1,8 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+PROJECT(cuda_helloworld)
+FIND_PACKAGE(CUDA REQUIRED)
+
+CUDA_ADD_EXECUTABLE(cuda_hello
+	main.cpp
+	hello.cu	
+)
