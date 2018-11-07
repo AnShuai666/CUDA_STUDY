@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/cuda_hello.dir/main.cpp.o CMakeFiles/cuda_hello.dir/cuda_hello_generated_hello.cu.o  -o cuda_hello -Wl,-Bstatic -lcudart_static -Wl,-Bdynamic -lpthread -ldl -lrt 

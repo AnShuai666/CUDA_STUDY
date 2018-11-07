@@ -1,0 +1,3 @@
+/home/yft/AnShuai/github/CUDA_STUDY/cuda_helloworld/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/yft/AnShuai/github/CUDA_STUDY/cuda_helloworld/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yft/AnShuai/github/CUDA_STUDY/cuda_helloworld/cmake-build-debug/CMakeFiles/cuda_hello.dir
