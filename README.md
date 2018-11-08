@@ -2,7 +2,7 @@ This is a cuda study progress by An Shuai and Yang Fengtuo!
 
 Thank you for watching!
 
-Please free to ask questions for An Shuai and Yang Feng!
+Please feel free and relax to ask questions for An Shuai and Yang Feng!
 
 An Shuai: 
 
