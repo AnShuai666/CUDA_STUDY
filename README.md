@@ -2,7 +2,7 @@ This is a cuda study progress by An Shuai and Yang Fengtuo!
 
 Thank you for watching!
 
-Please feel free and relax to ask questions for An Shuai and Yang Feng!
+Please feel free and relax to ask questions from An Shuai and Yang Feng!
 
 An Shuai: 
 
@@ -14,5 +14,5 @@ Yang Fengtuo:
 
 email: 1054413920@qq.com
 
-wechat: yt0818
+wechat: yft0818
 
