@@ -1,1 +1,0 @@
-/usr/bin/c++        -o usehello -rdynamic libhello.a 
