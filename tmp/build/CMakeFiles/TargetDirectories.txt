@@ -1,0 +1,3 @@
+/home/anshuai/yft/CUDA_STUDY/tmp/build/CMakeFiles/rebuild_cache.dir
+/home/anshuai/yft/CUDA_STUDY/tmp/build/CMakeFiles/edit_cache.dir
+/home/anshuai/yft/CUDA_STUDY/tmp/build/CMakeFiles/usehello.dir
