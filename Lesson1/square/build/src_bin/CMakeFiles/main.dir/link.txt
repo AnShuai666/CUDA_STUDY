@@ -1,0 +1,1 @@
+/usr/bin/c++   -fPIC -g   CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/main_generated_square.cu.o  -o ../../bin/main -rdynamic /usr/local/cuda/lib64/libcudart_static.a -lpthread -ldl -lrt 
