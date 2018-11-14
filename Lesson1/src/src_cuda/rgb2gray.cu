@@ -23,7 +23,7 @@ __global__ void gray(uchar4* d_in,uchar * d_out,int rows, int cols)
 void func()
 {
 	Mat src,dst,RGBA;
-	src =imread("/home/anshuai/yft/November/error_gray/res/1.jpg");
+	src =imread("../../res/1.jpg");
 	//imshow("1",src);
     //waitKey(0);
 	const int rows=src.rows;
@@ -55,11 +55,11 @@ void func()
     //unsigned char* data_ptr;
     Mat output(rows,cols,CV_8UC1,h_out);
     
-    imwrite("/home/anshuai/yft/November/error_gray/output/grayImg.jpg",output);
+    imwrite("../../output/grayImg.jpg",output);
 
 
     cudaFree(d_in);
     cudaFree(d_out);
-    imshow("2",output);
+    imshow("grayImg",output);
 	waitKey(5000);
 }
