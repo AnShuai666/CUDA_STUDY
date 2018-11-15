@@ -1,5 +1,5 @@
 find_package(CUDA REQUIRED)
-find_package(OpenCV 2.4.9 REQUIRED)
+find_package(OpenCV 2.4.9.1 REQUIRED)
 
 include_directories(../../include/include_cuda)
 
@@ -10,7 +10,7 @@ set(HEADERS_CUDA
 )
 
 set(SOURCE_FILES_CUDA 
-	gray.cu
+	rgb2gray.cu
 )
 
 cuda_add_library(rgb2gray SHARED ${HEADERS_CUDA} ${SOURCE_FILES_CUDA})
