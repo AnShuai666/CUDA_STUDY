@@ -23,9 +23,9 @@ __global__ void gray(uchar4* d_in,uchar * d_out,int rows, int cols)
 void func()
 {
 	Mat src,dst,RGBA;
-	src =imread("../../res/1.jpg");
+	src =imread("/home/anshuai/cudastudy/CUDA_STUDY/Lesson1/res/1.jpg");
 	//imshow("1",src);
-    //waitKey(0);
+        //waitKey(0);
 	const int rows=src.rows;
 	const int cols=src.cols;
 	int num_pixels=rows*cols;
@@ -55,7 +55,7 @@ void func()
     //unsigned char* data_ptr;
     Mat output(rows,cols,CV_8UC1,h_out);
     
-    imwrite("../../output/grayImg.jpg",output);
+    imwrite("/home/anshuai/cudastudy/CUDA_STUDY/Lesson1/output/grayImg.jpg",output);
 
 
     cudaFree(d_in);
