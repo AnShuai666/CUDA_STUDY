@@ -19,25 +19,21 @@ __global__ void gray(uchar4* d_in,uchar * d_out,int rows, int cols)
 	}
 }
 
-//extern "C" 
-void func()
+//extern "C"
+cv::Mat cudafunc(cv::Mat RGBAImage, cv::Mat GRAYImage)
 {
-	Mat src,dst,RGBA;
-	src =imread("/home/anshuai/cudastudy/CUDA_STUDY/Lesson1/res/1.jpg");
-	//imshow("1",src);
-        //waitKey(0);
-	const int rows=src.rows;
-	const int cols=src.cols;
+
+	const int rows=RGBAImage.rows;
+	const int cols=RGBAImage.cols;
 	int num_pixels=rows*cols;
 	uchar4 *h_in;
 	uchar *h_out;
 	uchar4 *d_in;
 	uchar *d_out;
 
-	cvtColor(src,RGBA,	CV_BGR2RGBA);
-	dst.create(rows,cols,CV_8UC1);
-	h_in = (uchar4*)RGBA.ptr<unsigned char>(0);
-    h_out = (uchar*)dst.ptr<unsigned char>(0);
+	h_in = (uchar4*)RGBAImage.ptr<unsigned char>(0);
+    h_out = (uchar*)GRAYImage.ptr<unsigned char>(0);
+
 	cudaMalloc((void**)&d_in, sizeof(uchar4)*num_pixels);
 	cudaMalloc((void**)&d_out,sizeof(uchar)*num_pixels);
 	
@@ -49,17 +45,10 @@ void func()
 	gray <<<gridsize,blocksize>>>(d_in,d_out,rows, cols);
 	cudaMemcpy(h_out,d_out,sizeof(uchar)*num_pixels,cudaMemcpyDeviceToHost);
 
-
-
-
-    //unsigned char* data_ptr;
     Mat output(rows,cols,CV_8UC1,h_out);
-    
-    imwrite("/home/anshuai/cudastudy/CUDA_STUDY/Lesson1/output/grayImg.jpg",output);
-
-
     cudaFree(d_in);
     cudaFree(d_out);
-    imshow("grayImg",output);
-	waitKey(5000);
+    return output;
+
 }
+ 
