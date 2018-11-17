@@ -1,5 +1,5 @@
 include_directories(../include/include_cuda)
-include_directories(../include/inlcude_cxx)
+include_directories(../include/include_cxx)
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 add_executable(main main.cpp)
