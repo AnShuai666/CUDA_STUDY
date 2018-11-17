@@ -2,7 +2,7 @@
 #define GRAY_CUH
 
 #include <iostream>
-
-void func();
+#include <opencv2/opencv.hpp>
+cv::Mat cudafunc(cv::Mat RGBAImage,cv::Mat GRAYImage);
 
 #endif //GRAY_CUH
