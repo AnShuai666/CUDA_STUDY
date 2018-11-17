@@ -1,4 +1,4 @@
-#include "gray.cuh"
+#include "rgb2gray.cuh"
 #include "image_io.h"
 
 //extern "C" 
