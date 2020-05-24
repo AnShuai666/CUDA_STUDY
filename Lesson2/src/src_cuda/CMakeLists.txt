@@ -1,0 +1,13 @@
+FIND_PACKAGE(CUDA REQUIRED)
+FIND_PACKAGE(OpenCV 2.4.9.1 REQUIRED)
+
+INCLUDE_DIRECTORIES(../../include/include_cuda)
+INCLUDE_DIRECTORIES(../../include/include_cxx)
+
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib/lib_cuda)
+
+SET(HEADERS_CUDA ../../include/include_cuda/gaussBlur.cuh)
+SET(SOURCE_FILES_CUDA gaussBlur.cu)
+
+CUDA_ADD_LIBRARY(gaussBlur SHARED ${HEADERS_CUDA} ${SOURCE_FILES_CUDA})
+TARGET_LINK_LIBRARIES(gaussBlur ${OpenCV_LIBS})
